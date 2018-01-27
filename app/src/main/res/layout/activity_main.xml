@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nettychattest.MainActivity">
+
+    <EditText
+        android:id="@+id/etUserId"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"/>
+    <Button
+        android:id="@+id/btnEnroll"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/etUserId"/>
+
+    <Button
+        android:id="@+id/btnFirstRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1번방"
+        android:layout_below="@id/etUserId"/>
+    <Button
+        android:id="@+id/btnSecondRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2번방"
+        android:layout_toRightOf="@id/btnFirstRoom"
+        android:layout_below="@id/etUserId"/>
+    <TextView
+        android:id="@+id/tvRoomName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/btnSecondRoom"
+        android:layout_below="@id/etUserId"
+        android:layout_marginTop="12dp"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/etTypeText"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"/>
+
+    <ListView
+        android:id="@+id/lvMsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnFirstRoom"
+        android:layout_above="@id/etTypeText">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/btnSendMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/etTypeText"
+        android:layout_below="@id/lvMsg"/>
+
+</RelativeLayout>
